@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Nav -->
+      <div class="nav container">
+        <a href="/" class="logo">Shopify</a>
+        <!--Cart icon-->
+        <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        <!-- Cart -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- Content -->
+          <div class="cart-content">
+
+          </div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- Buy button -->
+          <button type="button" class="btn-buy">Buy Now</button>
+          <!-- Cart close -->
+          <i class='bx bx-x' id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Shop -->
+    <section class="shop container">
+      <h2 class="section-title">Products</h2>
+		<form action="/search" method="post" th:object="${search}">
+			<input type="text" name="query"
+				field="*{query}" placeholder="Search...">
+			 <input
+				type="submit" value="Search">
+		</form>
+		<!-- Content -->
+      <div class="shop-content">
+        <!-- Box 1 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="product-box">
+          <img th:src="@{${'/img/' + image}}" alt="" class="product-img">
+          <h2 class="product-title" th:text="${name}"/></h2>
+          <div class="description">
+            <div>Description: <span th:text="${description}"></span></div>
+            <div>Color: <span th:text="${color}"></span></div>
+          </div>
+          <span class="price">$<span th:text="${price}"></span></span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc'></i>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+    </section>
+    <!-- link to JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

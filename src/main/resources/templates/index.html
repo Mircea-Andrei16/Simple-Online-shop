@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify</title>
+    <!-- css link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Nav -->
+      <div class="nav container">
+        <a href="/" class="logo">Shopify</a>
+        <!--Cart icon-->
+        <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        <!-- Cart -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- Content -->
+          <div class="cart-content">
+
+          </div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- Buy button -->
+          <button type="button" class="btn-buy">Buy Now</button>
+          <!-- Cart close -->
+          <i class='bx bx-x' id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Shop -->
+    <section class="shop container">
+      <h2 class="section-title">Products</h2>
+		<form action="/search" method="post" th:object="${search}" autocomplete="off">
+			<input type="text" name="query" id="query"
+				field="*{query}" placeholder="Search...">
+			 <input
+				type="submit" value="Search">
+		</form>
+		<!-- Content -->
+      <h2 class="category-title">Clothing</h2>
+      <div class="shop-content">
+        <!-- Box 1 -->
+        <div class="product-box">
+          <img src="img/clothing/coat.jpg" alt="" class="product-img">
+          <h2 class="product-title">HOODED PARKA</h2>
+          <div class="description">
+            <div>Description: Adidas coat.</div>
+            <div>Color: black</div>
+          </div>
+          <span class="price">$100</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc'></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="product-box">
+          <img src="img/clothing/hat.jpg" alt="" class="product-img">
+          <h2 class="product-title">BLACK HAT</h2>
+          <div class="description">
+            <div>Description: Adidas hat.</div>
+            <div>Color: black</div>
+          </div>
+          <span class="price">$15</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="product-box">
+          <img src="img/clothing/shorts.jpg" alt="" class="product-img">
+          <h2 class="product-title">Shorts</h2>
+          <div class="description">
+            <div>Description: Adidas shorts.</div>
+            <div>Color: blue</div>
+          </div>
+          <span class="price">$35</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+        <!-- Box 4 -->
+        <div class="product-box">
+          <img src="img/clothing/tshirt.jpg" alt="" class="product-img">
+          <h2 class="product-title">ADIDAS SHIRT</h2>
+          <div class="description">
+            <div>Description: Adidas shirt.</div>
+            <div>Color: black</div>
+          </div>
+          <span class="price">$40</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+      </div>
+      <h2 class="category-title">Various</h2>
+      <div class="shop-content">
+         <!-- Box 1 -->
+         <div class="product-box">
+          <img src="img/various/backpack.jpg" alt="" class="product-img">
+          <h2 class="product-title">BACKPACK</h2>
+          <div class="description">
+            <div>Description: Adidas backpack.</div>
+            <div>Color: black</div>
+          </div>
+          <span class="price">$150</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+         <!-- Box 2 -->
+         <div class="product-box">
+          <img src="img/various/buds.jpg" alt="" class="product-img">
+          <h2 class="product-title">WIRELESS EARBUDS</h2>
+          <div class="description">
+            <div>Description: Adidas buds.</div>
+            <div>Color: black</div>
+          </div>
+          <span class="price">$70.04</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+         <!-- Box 3 -->
+         <div class="product-box">
+          <img src="img/various/glasses.jpg" alt="" class="product-img">
+          <h2 class="product-title">SILVER SUNGLASSES</h2>
+          <div class="description">
+            <div>Description: Adidas sunglasses.</div>
+            <div>Color: silver</div>
+          </div>
+          <span class="price">$35</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+         
+         <!-- Box 4 -->
+         <div class="product-box">
+          <img src="img/various/water.jpg" alt="" class="product-img">
+          <h2 class="product-title">STRAW METAL BOTTLE</h2>
+          <div class="description">
+            <div>Description: Adidas straw bottle.</div>
+            <div>Color: blue</div>
+          </div>
+          <span class="price">$24.30</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+        </div>
+        <h2 class="category-title">Shoes</h2>
+        <div class="shop-content">
+         <!-- Box 1 -->
+         <div class="product-box">
+          <img src="img/shoes/ultraboost-22.jpg" alt="" class="product-img">
+          <h2 class="product-title">ULTRABOOST 22</h2>
+          <div class="description">
+            <div>Description: Adidas running shoes.</div>
+            <div>Color: blue/red</div>
+          </div>
+          <span class="price">$100</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="product-box">
+          <img src="img/shoes/mccartney.jpg" alt="" class="product-img">
+          <h2 class="product-title">MCCARTNEY</h2>
+          <div class="description">
+            <div>Description: Adidas casual shoes.</div>
+            <div>Color: yellow</div>
+          </div>
+          <span class="price">$230</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="product-box">
+          <img src="img/shoes/ultraboost-light.jpg" alt="" class="product-img">
+          <h2 class="product-title">ULTRABOOST LIGHT</h2>
+          <div class="description">
+            <div>Description: Adidas running shoes.</div>
+            <div>Color: black</div>
+          </div>
+          <span class="price">$150</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+        <!-- Box 4 -->
+        <div class="product-box">
+          <img src="img/shoes/ultraboost-running.jpg" alt="" class="product-img">
+          <h2 class="product-title">ULTRABOOST RUNNING</h2>
+          <div class="description">
+            <div>Description: Adidas running shoes.</div>
+            <div>Color: white/red</div>
+          </div>
+          <span class="price">$200</span>
+          <i class='bx bx-shopping-bag add-cart'></i>
+          <i class='bx bxs-file-doc add-doc' ></i>
+        </div>
+      </div>
+    </section>
+    <!-- link to JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
